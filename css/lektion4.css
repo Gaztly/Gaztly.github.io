@@ -1,0 +1,35 @@
+input {
+  border: none;
+  border-bottom: 2px solid black;
+  width: 30%;
+}
+input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 4px solid green;
+  width: 100%;
+  transition: width 1s;
+}
+.container-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#input_reset:hover {
+  color: red;
+  cursor: pointer;
+  font-weight: bolder;
+}
+#input_submit:hover {
+  cursor: pointer;
+  color: green;
+  font-weight: bolder;
+}
+
+form {
+  width: 70%;
+  max-width: 600px;
+  min-width: 200px;
+}

@@ -1,0 +1,434 @@
+h1 {
+  color: black;
+  text-align: center;
+  margin: 10px 100px 100px 100px;
+  border-radius: 5px;
+  border: 5px silver;
+  border-style: ridge;
+}
+body {
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.smalltext {
+  color: white;
+  flex-wrap: inherit;
+  justify-content: space-around;
+}
+
+.titles {
+  background-image: url("/images/landscapes/img-2.jpg");
+  border-image-width: auto;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-size: cover;
+}
+
+#fonts {
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 25%;
+  font-size: xx-large;
+  margin-top: 150px;
+  background-color: rgb(54, 53, 53);
+}
+
+.aside {
+  position: relative;
+  width: 20%;
+  padding-left: 10px;
+  float: right;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.aside-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+  object-fit: cover;
+  opacity: 1;
+  outline: 4px solid black;
+  filter: blur(4px);
+  box-shadow: 3px 8px 8px rgb(8, 8, 8);
+  border-radius: 10px;
+}
+
+.aside:hover .aside-image {
+  transform-origin: 150%;
+  transform: scale(3);
+  transition: all 2s;
+  filter: blur(0px);
+  border-radius: 50px;
+  box-shadow: 3px 86px 56px rgb(0, 0, 0, 0.5);
+  opacity: 1;
+}
+.aside-text {
+  font-size: 2em;
+  width: 100%;
+  height: 25%;
+  opacity: 0;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(60, 59, 59);
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 1);
+}
+.aside:hover .aside-text {
+  transform: translateX(-200%);
+  opacity: 1;
+  transition: all 3s;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+p {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: black;
+  width: fit-content;
+  font-size: 1.2em;
+}
+
+.pfortwitch {
+  font-family: fantasy;
+  font-size: 1rem;
+  color: black;
+  width: auto;
+  background-color: none;
+  text-align: center;
+  text-shadow: 3px 3px 3px white;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 50px;
+  border: 4px solid #333;
+  border-width: thick;
+  background-color: rgb(255, 255, 255, 0.5);
+  opacity: 0.8;
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    float: none;
+    display: block;
+  }
+}
+
+.link {
+  transform: translateX(-1em);
+  transition: all 400ms;
+  font-size: 30px;
+  color: black;
+  opacity: 1;
+  font-family: fantasy;
+  display: inline-block;
+  padding: 5px 10px;
+}
+i {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  opacity: 0;
+  transition: opacity 1s;
+  margin-right: 10px;
+}
+.link:hover i {
+  opacity: 1;
+  transition: 3s;
+}
+
+.link:hover {
+  transform: none;
+  color: black;
+  transition: opacity 2.5s;
+}
+
+.link:hover a {
+  opacity: 0.5;
+  transition: all 3s;
+  filter: blur(1px);
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+}
+.container-form {
+  display: flex;
+  width: 100%;
+  top: 0;
+  place-content: center;
+  flex-wrap: wrap;
+}
+/* Below are all CSS code for the page"twitch"
+It's to manipulate images to be circular and also adds some
+movement when you hover over to give some info etc.  */
+.twitch-card {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  position: relative;
+  outline: 4px solid goldenrod;
+  outline-offset: -5px;
+  box-shadow: 3px 8px 10px rgb(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: none;
+  opacity: 1;
+  margin: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.twitch-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.twitch-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  transform: translateY(-100%);
+}
+.twitch-card:hover .twitch-image {
+  transition: transform 4s;
+  transform: translateY(-100%) translateX(-150%) rotate(360deg) scale(0.2);
+  filter: blur(3px);
+}
+
+.twitch-card:hover .twitch-info {
+  display: block;
+  opacity: 1;
+  transition: all 2s;
+  transform: translateY(5%);
+}
+
+.twitch-imagesecond {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transform: translateY(310px);
+}
+.twitch-card:hover .twitch-imagesecond {
+  transform: translateY(0) rotate(360deg);
+  transition: transform 2s;
+  filter: brightness(50%) contrast(50%);
+}
+
+.twitch-card a {
+  position: relative;
+  background-color: purple;
+  border-radius: 0px;
+  color: white;
+  text-transform: uppercase;
+}
+
+header {
+  margin-top: 50px;
+  color: black;
+  outline-style: ridge;
+  width: 50%;
+  border-radius: 20px;
+  margin-left: 25%;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+footer {
+  display: flex;
+  height: 30px;
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  bottom: -10px;
+  background-color: #333;
+  color: white;
+}
+
+audio {
+  display: none;
+}
+.patrick {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container {
+  display: flex;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  text-align: center;
+  padding: 5%;
+}
+
+.card-container {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 225px;
+  height: 350px;
+  border-radius: 15px;
+  position: relative;
+  outline: 1px solid rgb(255, 255, 255, 0.8);
+  outline-offset: -5px;
+  box-shadow: 3px 8px 10px rgb(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: #333;
+  opacity: 0.8;
+  margin: 10px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+.card1 {
+  width: fit-content;
+  height: 300px;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+.card:hover {
+  box-shadow: 20px 30px 30px rgb(0, 0, 0, 1);
+  transition: all 2s;
+  opacity: 1;
+}
+
+.input {
+  width: 80%;
+  text-align: center;
+  padding-left: 1 rem;
+  margin-left: 0.5rem;
+  outline: 5px 8px 16px rgb(135, 155, 155, 10px);
+}
+
+.card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.card:hover .card-image {
+  transform: scale(1.2);
+  transition: transform 1s;
+  transform: translateY(-20%);
+  filter: blur(3px);
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0;
+  text-align: center;
+  transform: translateY(100%);
+}
+
+.card:hover .card-info {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+
+/* Using this for all-around button styling, as for inputs on firstpage */
+
+.btn {
+  color: white;
+  position: relative;
+  width: fit-content;
+  height: 10%;
+  margin-left: 1rem;
+  background-color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  transform: translateY(40%);
+  outline: 3px solid white;
+}
+
+.btn1 {
+  color: white;
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  margin-left: 0.5rem;
+  background-color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  transform: translateY(200px);
+  outline: 3px solid white;
+  filter: blur(6px);
+}
+
+.btn1:hover {
+  color: goldenrod;
+}
+
+/* Changes size of input on firstpage, shrinks when focused. */
+.input:focus {
+  width: 50%;
+  border: 5px green;
+  transition: all 2s;
+}
+
+.card:hover .btn1 {
+  background-color: black;
+  opacity: 1;
+  font-size: 30px;
+  border-radius: 30px;
+  width: 40%;
+  height: 45%;
+  left: 30%;
+  transform: translateY(-200px);
+  filter: blur(0px);
+  transition: all 2s;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 200px;
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    width: 120px;
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+}
